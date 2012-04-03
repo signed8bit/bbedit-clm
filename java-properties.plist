@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+  <!--
+    BBEdit codeless language module for Java properties files.
+    Matthew Montgomery
+    Version 1.0
+
+    Released under a Creative Commons Attribution-ShareAlike License:
+    <http://creativecommons.org/licenses/by-sa/2.0/>
+
+    Requires BBEdit 8.0 or higher. To install, copy here:
+
+      ~/Library/Application Support/BBEdit/Language Modules/
+
+    and relaunch BBEdit.
+  -->
+  <dict>
+    <key>BBEditDocumentType</key>
+    <string>CodelessLanguageModule</string>
+    <key>BBLMColorsSyntax</key>
+    <true/>
+    <key>BBLMIsCaseSensitive</key>
+    <true/>
+    <key>BBLMKeywordList</key>
+    <array>
+      <string/>
+    </array>
+    <key>BBLMLanguageCode</key>
+    <string>prop</string>
+    <key>BBLMLanguageDisplayName</key>
+    <string>Java Properties</string>
+    <key>BBLMScansFunctions</key>
+    <true/>
+    <key>BBLMSuffixMap</key>
+    <array>
+      <dict>
+        <key>BBLMLanguageSuffix</key>
+        <string>.properties</string>
+      </dict>
+    </array>
+    <key>BBLMCanSpellCheckCodeRuns</key>
+    <true/>
+    <key>Language Features</key>
+    <dict>
+      <key>Comment Pattern</key>
+      <string><![CDATA[(^[\s]*?[#!].*$)]]></string>
+
+      <key>String Pattern</key>
+      <string><![CDATA[((?<=[=:]{1}?).*$|(?<=\\[\n\r]).*$)]]></string>
+      <!--<string><![CDATA[((?<=\=).*$|(?<=\\[\n\r]).*$)]]></string>-->
+
+      <key>Function Pattern</key>
+      <string><![CDATA[(?P<function>(?P<function_name>[\S ]+)[=:](?P>string))]]></string>
+    </dict>
+  </dict>
+</plist>
