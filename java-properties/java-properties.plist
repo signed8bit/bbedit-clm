@@ -7,7 +7,7 @@
   <!--
     BBEdit codeless language module for Java properties files.
     Matthew Montgomery
-    Version 0.2
+    Version 0.3
 
     Released under a Creative Commons Attribution-ShareAlike License:
     <http://creativecommons.org/licenses/by-sa/2.0/>
@@ -32,7 +32,7 @@
     <true/>
 
     <key>BBLMScansFunctions</key>
-    <true/>
+    <false/>
 
     <key>BBLMIsCaseSensitive</key>
     <true/>
@@ -56,13 +56,16 @@
     <key>Language Features</key>
     <dict>
       <key>Comment Pattern</key>
-      <string><![CDATA[(^[\s]*?[#!].*$)]]></string>
+      <string><![CDATA[([\s]*?[#!].*$)]]></string>
 
       <key>String Pattern</key>
       <string><![CDATA[((?<=[=:]|\\[\r]).+$)]]></string>
 
-      <key>Function Pattern</key>
-      <string><![CDATA[(?P<function>(?P<function_name>^[^#!\r]+?)[:=](?P>string))]]></string>
+      <!--<key>Function Pattern</key>-->
+      <!--<string><![CDATA[(?P<function>(?P<function_name>[\S]+(?=[=:])[=:](?s).+$))]]></string>-->
+
+      <!--<key>Skip Pattern</key>-->
+      <!--<string><![CDATA[(?P>comment)]]></string>-->
     </dict>
   </dict>
 </plist>
