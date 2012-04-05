@@ -62,7 +62,7 @@
       <string><![CDATA[((?<=[=:]|\\[\r]).+$)]]></string>
 
       <key>Function Pattern</key>
-      <string><![CDATA[(?P<function>(?P<function_name>^[^#!]+?)[:=](?P>string))]]></string>
+      <string><![CDATA[(?P<function>(?P<function_name>^[^#!\r]+?)[:=](?P>string))]]></string>
     </dict>
   </dict>
 </plist>
