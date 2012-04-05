@@ -7,12 +7,12 @@
   <!--
     BBEdit codeless language module for Java properties files.
     Matthew Montgomery
-    Version 1.0
+    Version 0.2
 
     Released under a Creative Commons Attribution-ShareAlike License:
     <http://creativecommons.org/licenses/by-sa/2.0/>
 
-    Requires BBEdit 8.0 or higher. To install, copy here:
+    Requires BBEdit 8.5 or later. To install, copy here:
 
       ~/Library/Application Support/BBEdit/Language Modules/
 
@@ -21,20 +21,27 @@
   <dict>
     <key>BBEditDocumentType</key>
     <string>CodelessLanguageModule</string>
+
+    <key>BBLMLanguageDisplayName</key>
+    <string>Java Properties</string>
+
+    <key>BBLMLanguageCode</key>
+    <string>prop</string>
+
     <key>BBLMColorsSyntax</key>
     <true/>
+
+    <key>BBLMScansFunctions</key>
+    <true/>
+
     <key>BBLMIsCaseSensitive</key>
     <true/>
+
     <key>BBLMKeywordList</key>
     <array>
       <string/>
     </array>
-    <key>BBLMLanguageCode</key>
-    <string>prop</string>
-    <key>BBLMLanguageDisplayName</key>
-    <string>Java Properties</string>
-    <key>BBLMScansFunctions</key>
-    <true/>
+
     <key>BBLMSuffixMap</key>
     <array>
       <dict>
@@ -42,16 +49,17 @@
         <string>.properties</string>
       </dict>
     </array>
+
     <key>BBLMCanSpellCheckCodeRuns</key>
     <true/>
+
     <key>Language Features</key>
     <dict>
       <key>Comment Pattern</key>
       <string><![CDATA[(^[\s]*?[#!].*$)]]></string>
 
       <key>String Pattern</key>
-      <string><![CDATA[((?<=[=:]{1}?).*$|(?<=\\[\n\r]).*$)]]></string>
-      <!--<string><![CDATA[((?<=\=).*$|(?<=\\[\n\r]).*$)]]></string>-->
+      <string><![CDATA[((?<=[=:]|\\[\n\r]).+$)]]></string>
 
       <key>Function Pattern</key>
       <string><![CDATA[(?P<function>(?P<function_name>[\S ]+)[=:](?P>string))]]></string>
