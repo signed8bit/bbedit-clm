@@ -7,8 +7,6 @@ _~/Library/Application Support/BBEdit/Language Modules/_
 
 and relaunch BBEdit.
 
-----------------------------------------------------------------------------------------------------
-
 Modules
 -------
 
