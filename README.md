@@ -10,7 +10,9 @@ and relaunch BBEdit.
 Modules
 -------
 
-_java-properties.plist_
+_java-properties/java-properties.plist_
 
-Support for Java Properties syntax coloring.
+Provides support for Java Properties syntax coloring.
+
+
 
