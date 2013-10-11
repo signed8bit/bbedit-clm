@@ -12,7 +12,7 @@ Modules
 
 _java-properties/java-properties.plist_
 
-Provides support for Java Properties syntax coloring.
+Provides support for Java Properties syntax coloring. Property keys are mapped as function names with the function body running to the end of the corresponding property value.
 
 
 
